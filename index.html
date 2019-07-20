@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Desafio 1</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 500px;
+            height: 500px;
+            border: 10px solid black;
+            background-color: #0099e5;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="name">Encuentre la Ultima Letra de su Nombre: </h1>
+        <div class="container-input">
+        </div>
+        <div class="resultado">
+            <h3 id="resultado"> El resultado es:</h3>
+        </div>
+    </div>
+    <script>
+        var name = document.getElementById('name').innerHTML;
+        var resultado = document.getElementById('resultado').innerHTML;
+        var person = prompt("Por favor ingrese su nombre");
+        var number = person.length;
+        var letter = person.charAt(number - 1);
+        document.getElementById("name").innerHTML = name +  " " + person;
+        document.getElementById("resultado").innerHTML = resultado +  "<br>" + letter;
+    </script>
+</body>
+</html>
